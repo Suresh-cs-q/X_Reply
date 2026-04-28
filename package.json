@@ -1,0 +1,33 @@
+{
+  "name": "x-reply-bot",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:llm": "tsx src/smoke/llm.ts",
+    "test:browser": "tsx src/smoke/browser.ts",
+    "bootstrap": "tsx scripts/bootstrap-session.ts",
+    "verify": "tsx scripts/verify-session.ts",
+    "reply": "tsx scripts/post-reply.ts",
+    "draft": "tsx scripts/draft.ts",
+    "discover": "tsx scripts/discover.ts",
+    "run": "tsx scripts/run.ts",
+    "dry": "tsx scripts/run.ts --dry",
+    "trigger:dev": "npx trigger.dev@latest dev --profile xreply",
+    "trigger:deploy": "npx trigger.dev@latest deploy --profile xreply"
+  },
+  "dependencies": {
+    "@google/genai": "^0.7.0",
+    "@trigger.dev/build": "^4.4.4",
+    "@trigger.dev/sdk": "^4.4.4",
+    "dotenv": "^16.4.5",
+    "openai": "^4.77.0",
+    "playwright": "^1.49.1",
+    "trigger.dev": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
